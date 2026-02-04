@@ -1,7 +1,9 @@
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { DiseaseAnalysis, Language } from "../types";
 
-// Initialize Gemini Client
+// Fix: The API key must be obtained exclusively from `process.env.API_KEY` as per the coding guidelines.
+// This resolves the error on `import.meta.env` and aligns with the requirement
+// that the API key's availability is handled externally.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const analysisSchema: Schema = {
