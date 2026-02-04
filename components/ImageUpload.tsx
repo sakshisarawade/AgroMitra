@@ -47,8 +47,8 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImageSelected, lang }) => {
       onDrop={handleDrop}
       className={`relative w-full h-64 border-2 border-dashed rounded-xl flex flex-col items-center justify-center transition-all cursor-pointer group
         ${isDragging 
-          ? 'border-green-500 bg-green-50' 
-          : 'border-green-200 hover:border-green-400 hover:bg-green-50/50'}`}
+          ? 'border-green-600 bg-green-50' 
+          : 'border-green-300 hover:border-green-600 hover:bg-green-50'}`}
     >
       <input
         type="file"

@@ -51,7 +51,7 @@ const AnalysisResults: React.FC<AnalysisResultsProps> = ({ result, onReset, lang
 
   let colorTheme = {
     bg: 'bg-green-50',
-    border: 'border-green-100',
+    border: 'border-green-600',
     text: 'text-green-900',
     badgeBg: 'bg-green-200',
     badgeText: 'text-green-900',
@@ -62,7 +62,7 @@ const AnalysisResults: React.FC<AnalysisResultsProps> = ({ result, onReset, lang
   if (diseaseLower.includes('healthy')) {
     colorTheme = {
       bg: 'bg-emerald-50',
-      border: 'border-emerald-200',
+      border: 'border-emerald-600',
       text: 'text-emerald-800',
       badgeBg: 'bg-emerald-200',
       badgeText: 'text-emerald-800',
@@ -174,7 +174,7 @@ const AnalysisResults: React.FC<AnalysisResultsProps> = ({ result, onReset, lang
         {result.treatment && (
           <div>
             <h3 className="text-sm font-semibold text-green-700/60 uppercase tracking-wider mb-2">{t.sections.treatment}</h3>
-            <div className="bg-green-50/50 rounded-lg p-4 border border-green-100 text-green-900 flex items-start gap-3">
+            <div className="bg-green-50/50 rounded-lg p-4 border border-green-600 text-green-900 flex items-start gap-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
               </svg>
@@ -188,7 +188,7 @@ const AnalysisResults: React.FC<AnalysisResultsProps> = ({ result, onReset, lang
              <h3 className="text-sm font-semibold text-green-700/60 uppercase tracking-wider mb-2">{t.sections.preventative}</h3>
              <ul className="space-y-2">
                 {result.preventativeMeasures.map((measure, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-green-900 bg-green-50/30 p-2 rounded">
+                  <li key={idx} className="flex items-start gap-2 text-green-900 bg-green-50/30 border border-green-600 p-2 rounded">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-600 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>

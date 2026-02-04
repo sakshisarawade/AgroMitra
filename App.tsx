@@ -89,6 +89,22 @@ const App: React.FC = () => {
         {/* Intro Section - Only show when idle */}
         {status === AnalysisStatus.IDLE && (
           <div className="text-center mb-12 animate-fade-in-up">
+            
+            {/* Tomato Plant Image */}
+            <div className="flex justify-center mb-8">
+               <div className="relative group">
+                 <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                 <img 
+                   src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=400&h=400&fit=crop&q=80" 
+                   alt="Tomato Plant" 
+                   className="relative w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-2xl shadow-xl border-4 border-white transform transition-transform duration-500 hover:scale-105"
+                 />
+                 <div className="absolute -bottom-4 -right-4 bg-white p-2 rounded-full shadow-lg border border-green-100 z-10">
+                    <span className="text-2xl" role="img" aria-label="tomato">🍅</span>
+                 </div>
+               </div>
+            </div>
+
             <h2 className="text-3xl font-extrabold text-green-900 sm:text-4xl mb-4">
               {t.heroTitle}
             </h2>
@@ -96,7 +112,7 @@ const App: React.FC = () => {
               {t.heroDesc}
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full font-semibold text-sm border border-green-200 shadow-sm">
+              <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full font-semibold text-sm border border-green-600 shadow-sm">
                 🌿 {t.labels.healthy}
               </span>
               <span className="px-4 py-2 bg-orange-100 text-orange-800 rounded-full font-semibold text-sm border border-orange-200 shadow-sm">
